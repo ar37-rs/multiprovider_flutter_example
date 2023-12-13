@@ -38,7 +38,7 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Dispatching Context In MultiProvider Example'),
       ),
-      body: Center(child: ConsumerWidget.add((context) {
+      body: Center(child: consumerCxt((context) {
         ThemeOption getThemeOption = context.watch<ThemeOption>();
         return Column(
           mainAxisSize: MainAxisSize.min,
@@ -65,7 +65,7 @@ class MyHomePage extends StatelessWidget {
           ],
         );
       })),
-      floatingActionButton: ConsumerWidget.add((context) {
+      floatingActionButton: consumerCxt((context) {
         return context.watch<ThemeOption>().isTicking
             ? const CircularProgressIndicator()
             : FloatingActionButton(

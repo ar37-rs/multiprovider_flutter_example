@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-/// Add and manage consumer widget (Alias for Consumer class)
-abstract class ConsumerWidget {
-  static Widget add(Widget Function(BuildContext) function) {
-    return Consumer(builder: (context, _, child) => function(context));
-  }
+/// Manage widget using consumer build context (Alias for Consumer class)
+Widget consumerCxt(Widget Function(BuildContext) function) {
+  return Consumer(builder: (context, _, child) => function(context));
 }
 
 extension BuildCxt on BuildContext {
