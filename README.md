@@ -2,4 +2,4 @@
 
 Example on how to dispatch context in MultiProvider Flutter as simple as possible,
 
-no other dependencies than provider itself.
+no other dependencies than provider itself..
